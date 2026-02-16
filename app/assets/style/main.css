@@ -1,5 +1,5 @@
 @import "reset.css";
 
 .container {
-    padding: 0 clamp(2.6rem, 5vw, 6rem);
+    padding: 0 clamp(2rem, 5vw, 6rem);
 }
