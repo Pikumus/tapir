@@ -29,12 +29,12 @@ const { formattedPrice, creditPrice } = useProductPrice(() => props.price)
 .catalog-card {
 	display: flex;
 	flex-direction: column;
-	gap: 3.1rem;
-	
+	gap: clamp(1rem, 2vw, 3.1rem);
+
 	&__image-wrapper {
 		position: relative;
 		width: 100%;
-		height: 180px;
+		height: clamp(93px, 20vw, 180px);
 		overflow: hidden;
 		display: flex;
 		align-items: center;
@@ -50,20 +50,21 @@ const { formattedPrice, creditPrice } = useProductPrice(() => props.price)
 	&__favorite {
 		position: absolute;
 		top: 1.2rem;
-		right: 1.2rem;
+		right: 0;
 		background: none;
 		border: none;
 		cursor: pointer;
-	}
-
-	&__info {
-		padding-top: 1.2rem;
 	}
 
 	&__prices {
 		display: flex;
 		align-items: center;
 		gap: 0.8rem;
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: start;
+			gap: 0;
+		}
 	}
 
 	&__price {
@@ -81,7 +82,7 @@ const { formattedPrice, creditPrice } = useProductPrice(() => props.price)
 
 	&__name {
 		margin-top: 0.5rem;
-		font-size: 1.6rem;
+		font-size: clamp(1.2rem, 1.5vw, 1.6rem);
 	}
 }
 </style>

@@ -21,7 +21,7 @@
 	&__inner {
 		display: flex;
 		flex-direction: column;
-		gap: 4rem;
+		gap: clamp(2rem, 3vw, 4rem);
 	}
 	&__title {
 		text-transform: uppercase;
@@ -31,7 +31,7 @@
 	&__button {
 		width: fit-content;
 		background-color: red;
-		padding: 1rem 2.4rem;
+		padding: clamp(0.8rem, 1vw, 1rem) clamp(1.6rem, 2vw, 2.4rem);
 		font-size: 1.4rem;
 		font-weight: 400;
 		line-height: 2rem;

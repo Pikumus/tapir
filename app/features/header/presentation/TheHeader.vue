@@ -33,8 +33,8 @@
 		background-color: #F5F5F5;
 		display: flex;
 		align-items: center;
-		padding: 1rem 2.4rem;
-		gap: 4rem;
+		padding: 1rem clamp(1.2rem, 2vw, 2.4rem);
+		gap: clamp(2rem, 3vw, 4rem);
 		margin: 0 auto;
 		@media (max-width: 768px) {
 			display: none;

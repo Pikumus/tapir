@@ -35,26 +35,29 @@ const { products, loading, hasError, hasMore, loadMore } = await useCatalogProdu
 
 <style scoped lang="scss">
 .catalog {
-	padding-top: 11rem;
-	padding-bottom: 11rem;
+	padding-top: clamp(5rem, 7vw, 11rem);
+	padding-bottom: clamp(5rem, 7vw, 11rem);
 	display: flex;
 	flex-direction: column;
-	gap: 11rem;
-	
+	gap: clamp(5rem, 7vw, 11rem);
+
 	&__title {
 		text-align: center;
 		text-transform: uppercase;
-		font-size: 4.2rem;
+		font-size: clamp(2.8rem, 4vw, 4.2rem);
 		line-height: 110%;
 		font-weight: 500;
 	}
-	
+
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-		gap: 4rem;
+		gap: clamp(2rem, 3vw, 4rem);
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
-	
+
 	&__button {
 		align-self: center;
 		font-size: 1.4rem;
@@ -63,12 +66,12 @@ const { products, loading, hasError, hasMore, loadMore } = await useCatalogProdu
 		border: 1px solid black;
 		cursor: pointer;
 	}
-	
+
 	&__loading {
 		align-self: center;
 		font-size: 1.6rem;
 	}
-	
+
 	&__error {
 		display: flex;
 		flex-direction: column;

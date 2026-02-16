@@ -37,16 +37,20 @@ const columns = [
 <style scoped lang="scss">
 .footer {
 	background-color: black;
-	padding: 10rem 0.6rem;
+	padding: clamp(5rem, 7vw, 10rem) 0.6rem;
 
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 2rem;
+		gap: clamp(2rem, 3vw, 2rem);
 
 		@media (max-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: clamp(2rem, 4vw, 3rem);
+		}
+
+		@media (max-width: 480px) {
 			grid-template-columns: 1fr;
-			gap: 3rem;
 		}
 	}
 
@@ -55,7 +59,7 @@ const columns = [
 		font-weight: 500;
 		color: #6F6F6F;
 		line-height: 140%;
-		margin-bottom: 1.6rem;
+		margin-bottom: clamp(1rem, 1.5vw, 1.6rem);
 	}
 
 	&__list {
