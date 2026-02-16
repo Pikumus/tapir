@@ -35,11 +35,11 @@ const { products, loading, hasError, hasMore, loadMore } = await useCatalogProdu
 
 <style scoped lang="scss">
 .catalog {
-	padding-top: clamp(5rem, 7vw, 11rem);
-	padding-bottom: clamp(5rem, 7vw, 11rem);
+	padding-top: clamp(2rem, 7vw, 11rem);
+	padding-bottom: clamp(2rem, 7vw, 11rem);
 	display: flex;
 	flex-direction: column;
-	gap: clamp(5rem, 7vw, 11rem);
+	gap: clamp(4rem, 7vw, 11rem);
 
 	&__title {
 		text-align: center;
