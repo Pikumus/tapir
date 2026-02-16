@@ -37,16 +37,16 @@ const columns = [
 <style scoped lang="scss">
 .footer {
 	background-color: black;
-	padding: clamp(5rem, 7vw, 10rem) 0.6rem;
+	padding: clamp(6rem, 7vw, 10rem) clamp(2rem, 7vw, 0.6rem);
 
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: clamp(2rem, 3vw, 2rem);
+		gap: 2rem;
 
 		@media (max-width: 768px) {
 			grid-template-columns: repeat(2, 1fr);
-			gap: clamp(2rem, 4vw, 3rem);
+			gap: clamp(6rem, 4vw, 3rem);
 		}
 
 		@media (max-width: 480px) {
